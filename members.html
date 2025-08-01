@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DPOC - 멤버 소개</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1 class="site-title">DPOC - 멤버 소개</h1>
+    <nav class="navbar">
+      <a href="index.html">홈</a>
+      <a href="members.html">멤버 소개</a>
+      <a href="games.html">게임 목록</a>
+      <a href="history.html">걸어온 길</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌓</button>
+  </header>
+
+  <main>
+    <section class="member-section">
+      <h2>메인 멤버</h2>
+      <div class="member-grid">
+        <div class="member-card">
+          <img src="assets/members/뚜껑머리.png" alt="뚜껑머리">
+          <h3>뚜껑머리</h3>
+          <p>뚜머 / Lidhead</p>
+        </div>
+        <div class="member-card">
+          <img src="assets/members/삐투.png" alt="삐2">
+          <h3>삐투</h3>
+          <p>삐2 / bangchanin</p>
+        </div>
+        <div class="member-card">
+          <img src="assets/members/옹러.png" alt="옹러">
+          <h3>옹러</h3>
+          <p>옹러 / ongler</p>
+        </div>
+        <div class="member-card">
+          <img src="assets/members/치두떡.png" alt="치두떡">
+          <h3>치두떡</h3>
+          <p>김치민두호떡 / KMHCHI</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="member-section">
+      <h2>일반 멤버</h2>
+      <div class="member-grid">
+        <div class="member-card">
+          <img src="assets/members/첼로.png" alt="첼로">
+          <h3>첼로</h3>
+          <p>포실포실 첼시? / LJK7</p>
+        </div>
+        <div class="member-card">
+          <img src="assets/members/달현이.png" alt="달현이">
+          <h3>달현이</h3>
+          <p>달현이 / Ethan092761</p>
+        </div>
+        <div class="member-card">
+          <img src="assets/members/류건이.png" alt="류건이">
+          <h3>류건이</h3>
+          <p>류건이 / LK2</p>
+        </div>
+        <div class="member-card">
+          <img src="assets/members/우진이.png" alt="우진이">
+          <h3>우진이</h3>
+          <p>우진이 / Liuken</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://youtube.com" target="_blank"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+    <a href="https://discord.gg/acpfFVn7m8" target="_blank"><img src="assets/icons/discord.svg" alt="Discord"></a>
+    <a href="https://playentry.org/profile/67657ed82ec3479bc4d5af50/project?sort=created&term=all&isOpen=all" target="_blank"><img src="assets/icons/entry.svg" alt="Entry"></a>
+    
+    <p class="copyright">ⓒ 2025 팀 DPOC</p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const storedTheme = localStorage.getItem("theme") || "dark";
+    document.body.classList.add(storedTheme);
+
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+      const currentTheme = document.body.classList.contains("light") ? "light" : "dark";
+      localStorage.setItem("theme", currentTheme);
+    });
+  </script>
+</body>
+</html>

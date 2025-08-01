@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPOC - 걸어온 길</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/history.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1 class="site-title">DPOC - 걸어온 길</h1>
+    <nav class="navbar">
+      <a href="index.html">홈</a>
+      <a href="members.html">멤버 소개</a>
+      <a href="games.html">게임 목록</a>
+      <a href="history.html">걸어온 길</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌓</button>
+  </header>
+
+  <main class="history-section">
+    <h2>팀 DPOC의 발자취</h2>
+    <p>팀 DPOC가 지금까지 걸어온 여정을 시간 순으로 소개합니다.</p>
+
+    <ul class="timeline">
+      <li>
+        <strong>2021년 중반</strong> - 뚜머와 김치민두호떡(現 치두떡)의 만남
+      </li>
+      <li>
+        <strong>2022년 전체</strong> - 뚜머와 치두떡의 분반, 이후 활동 미미
+      </li>
+      <li>
+        <strong>2023.01.30</strong> - 치두떡의 이사
+      </li>
+      <li>
+        <strong>2023년 2학기</strong> - 뚜머와 삐투의 만남
+      </li>
+      <li>
+        <strong>2024년</strong> - 뚜머와 삐투의 분반, 뚜머와 옹러와의 만남. '뚜삐옹치' 임시 출범
+      </li>
+      <li>
+        <strong>2024.12.21</strong> - 삐투, 옹러와 치두떡의 만남, 이후 '뚜삐옹치'(現 DPOC의 전신) 정식 출범
+      </li>
+      <li>
+        <strong>2024년</strong> - Sol's RNG의 초대 DPOC 최주요게임 당선
+      </li>
+      <li>
+        <strong>2025.01.13</strong> - 최초의 일반멤버 '오리너구리(파면 당시 첼시)' 영입
+      </li>
+      <li>
+        <strong>2025.02.16</strong> - 제 1회 모임(現 DPOC 정기 모임회의) 개최
+      </li>
+      <li>
+        <strong>2025년</strong> - 2번째 일반멤버 '류건이' 영입
+      </li>
+      <li>
+        <strong>2025.03.06</strong> - 3번째 일반멤버 '달현이' 영입
+      </li>
+      <li>
+        <strong>2025.05.18</strong> - 제 1회 DPOC 정기평가고사 및 제 2차 전국 DPOC 모임회의(現 DPOC 정기 모임회의) 개최
+      </li>
+      <li>
+        <strong>2025.06.28</strong> - 일반멤버 첼시(오리너구리) 파면
+      </li>
+      <li>
+        <strong>2025.06.28</strong> - 4번째 일반멤버 '첼로' 영입
+      </li>
+      <li>
+        <strong>2025.07.19</strong> - 제 3회 DPOC 정기 모임회의 개최
+      </li>
+      <li>
+        <strong>2025.07.20</strong> - 포인트제 도입
+      </li>
+      <li>
+        <strong>2025.07.27</strong> - 지속적인 노잼 컨텐츠와 불성실한 업뎃에 따른 Sol's RNG의 최주요게임직 박탈
+      </li>
+      <li>
+        <strong>2025.07.29</strong> - Grow a Garden의 제 2대 DPOC 최주요게임 당선
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://youtube.com" target="_blank"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+    <a href="https://discord.gg/acpfFVn7m8" target="_blank"><img src="assets/icons/discord.svg" alt="Discord"></a>
+    <a href="https://playentry.org/profile/67657ed82ec3479bc4d5af50/project?sort=created&term=all&isOpen=all" target="_blank"><img src="assets/icons/entry.svg" alt="Entry"></a>
+    
+    <p class="copyright">ⓒ 2025 팀 DPOC</p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const storedTheme = localStorage.getItem("theme") || "dark";
+    document.body.classList.add(storedTheme);
+
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+      const currentTheme = document.body.classList.contains("light") ? "light" : "dark";
+      localStorage.setItem("theme", currentTheme);
+    });
+  </script>
+</body>
+</html>
