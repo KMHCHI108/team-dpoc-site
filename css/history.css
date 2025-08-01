@@ -1,0 +1,39 @@
+.history-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.history-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.history-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #333;
+  text-align: left;
+}
+
+body.light .timeline li {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

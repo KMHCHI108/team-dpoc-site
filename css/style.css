@@ -1,0 +1,285 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111;
+  color: #00ffcc;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+b {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* 라이트 모드 */
+body.light {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: #222;
+  color: #00ffcc;
+}
+
+body.light header {
+  background-color: #eee;
+  color: #111;
+}
+
+.site-title {
+  font-size: 1.5rem;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* 소개 섹션 */
+.intro {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+}
+
+/* 슬라이드 */
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  display: block;
+}
+
+
+
+/* 멤버 소개 */
+.member-section {
+  padding: 2rem;
+}
+
+.member-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.member-card {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 8px #222;
+  transition: transform 0.2s;
+}
+
+.member-card:hover {
+  transform: scale(1.03);
+}
+
+body.light .member-card {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-group {
+  display: flex;
+  justify-content: center;   /* 가운데 정렬 */
+  flex-wrap: wrap;           /* 여러 줄로 */
+  gap: 20px;                 /* 멤버 사이 간격 */
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.member-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* 게임 목록 전체 레이아웃 */
+.game-section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.game-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* 게임 카드 그리드 */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+
+  justify-content: center;
+  align-items: start;
+}
+
+/* 게임 카드 스타일 */
+.game-card {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #000;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+}
+
+body.light .game-card {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 게임 이미지 */
+.game-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* 게임 제목 */
+.game-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #00ffcc;
+}
+
+/* 라이트 모드 대응 */
+body.light .game-section h2,
+body.light .game-card h3 {
+  color: #111;
+}
+
+/* 반응형 조정 */
+@media (max-width: 600px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* 푸터 */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: var(--footer-bg, #1a1a1a); /* 다크/라이트 대응 */
+  border-top: 1px solid var(--border-color, #444); /* 구분선 */
+}
+
+
+body.light footer {
+  background-color: #eee;
+}
+
+footer a svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  filter: invert(100%);
+  box-sizing: content-box;
+}
+
+footer a:hover svg {
+  transform: scale(1.1);
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .member-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slideshow-container {
+    max-height: 250px;
+  }
+}
